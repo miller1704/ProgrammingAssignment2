@@ -37,7 +37,9 @@ cacheSolve <- function(x, ...) {
                 return(invm)
         }
         data <- x$get()
-        invm <- mean(data, ...)
-        x$setmean(invm)
+        invm <- solve(data, ...)
+        x$setinvm(invm)
         invm
 }
+
+
